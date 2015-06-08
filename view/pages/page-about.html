@@ -1,0 +1,26 @@
+{% extends '../layout/layout-main.html' %}
+{% block title %}About{% endblock %}
+{% block content %}
+<section id="about">
+    <h1>{{data.about_h1}}</h1>
+    <article>
+        <p>Did you know I was a fireman?</p>
+        <img width="960" height="638" src="https://res.cloudinary.com/flere/image/upload/film_imgs/jkiee_zprvqd.jpg"
+             alt="me"/>
+    </article>
+    <section class="form_send">
+        <h3>Contact</h3>
+        <p class="success_message">Thank you</p>
+        <form name="form_send_ek" class="some_form_haha">
+            <div class="form_wraper">
+                <input name="email" type="email" placeholder="Your email" required/>
+            </div>
+            <div class="form_wraper">
+                <textarea name="text" cols="10" rows="10" placeholder="Your message" required></textarea>
+            </div>
+            <input type="text" class="hide"/>
+            <button class="send_email">Send</button>
+        </form>
+    </section>
+</section>
+{% endblock %}

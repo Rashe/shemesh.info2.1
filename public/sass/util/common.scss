@@ -1,0 +1,252 @@
+//vars
+//$font_family:  Arial, "MS Trebuchet", sans-serif;
+$font_family: "Courier New", Courier, monospace;
+$color_main: #000;
+$font_13: 13px;
+$bl: block;
+$inbl: inline-block;
+
+//the css
+//main styles
+
+body {
+  font-family: $font_family;
+  background: #fff;
+  //  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+  //  background-color: #282828;
+  //  background-size: 16px 16px;
+  color: $color_main;
+  font-size: $font_13;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/*HEADER*/
+
+#outside {
+  position: relative;
+  display: block;
+  width: auto;
+  text-align: center;
+  a {
+    font-size: 1.3em;
+    text-decoration: underline;
+    text-align: center;
+    color: #000000;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+.top_list {
+  padding: 0;
+  margin: 3% 0 0 0;
+  list-style: none;
+
+  .top_menu {
+    text-decoration: underline;
+    text-align: center;
+    color: #000000;
+    display: inline-block;
+    border-right: 1px #aeaeae solid;
+    height: 2em;
+    padding: 0.1em 1em;
+    position: relative;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .about_menu {
+    &:hover {
+      .nav_image {
+        display: block;
+      }
+    }
+  }
+
+  .nav_image {
+    display: none;
+    position: absolute;
+    width: 100%;
+    right: 4em;
+  }
+}
+
+.extended {
+
+  a:hover {
+    cursor: context-menu;
+  }
+}
+
+.bottom_list {
+  display: none;
+  list-style: none;
+
+  li {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    background-color: #003366;
+    /*background-color: #D00000 ;*/
+    /*padding: 5px 0;*/
+    margin: 1px 0;
+  }
+}
+
+.nav_text {
+  display: $bl;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  position: absolute;
+  margin-top: 300px;
+  font-size: 18px;
+  margin-left: -32px;
+
+}
+
+.nav_text_wide {
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  margin-top: 0;
+  margin-left: 0;
+  top: 0;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.display {
+  display: $bl;
+}
+
+.hide {
+  display: none;
+}
+
+.arrow {
+  display: $bl;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 20px solid #404040;
+
+  &:hover {
+    border-left: 20px solid #4f4f4f;
+  }
+}
+
+.nav_wide {
+  min-width: 90px;
+  width: 15%;
+  z-index: 1000;
+}
+
+.arrow_wide {
+  float: right;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: none;
+  border-right: 18px solid #404040;
+}
+
+.arrow_wide {
+  &:hover {
+    border-right: 18px solid #4f4f4f;
+    border-left: none;
+  }
+}
+
+.menu {
+  position: relative;
+  margin-left: 20px;
+  top: -34px;
+}
+
+/*FOOTER*/
+footer {
+  position: absolute;
+}
+
+/*tooltip*/
+
+.tooltip {
+  outline: none;
+}
+
+.tooltip {
+
+  strong {
+    line-height: 30px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  span {
+    z-index: 10;
+    display: none;
+    padding: 7px 12px;
+    margin-top: -20px;
+    margin-left: 14px;
+    width: 45px;
+    line-height: 16px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+  }
+
+  &:hover {
+
+    span {
+      display: inline;
+      position: absolute;
+      color: #111;
+      border: 1px solid #DCA;
+      background: #fffAF0;
+    }
+  }
+
+}
+
+.callout {
+  z-index: 20;
+  position: absolute;
+  top: 30px;
+  border: 0;
+  left: -12px;
+}
+
+@media screen and (orientation:landscape) {
+
+}
+
+@media screen and (orientation:portrait) {
+
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} | shemesh.info </title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{data.meta_description}}">
+
+    {# CSS #}
+    {% set icons = true  %}
+    {% block css_include %}
+    {% include '../blocks/block-css_include_services.html' with icons %}
+    {% endblock %}
+
+    {# JS #}
+    {% block js_include %}
+    {% include '../blocks/block-js_include_servies.html' %}
+    {% endblock %}
+</head>
+<body class="{{css}}">
+<header>
+    {# NAVIGATION #}
+    {% block nav %}
+        {% include '../blocks/block-nav_inside.html' with data%}
+    {% endblock %}
+</header>
+
+{# CONTENT #}
+{% block content %}{% endblock %}
+
+</body>
+</html>

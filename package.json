@@ -1,0 +1,33 @@
+{
+  "name": "shemesh_js",
+  "version": "4.1.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "*",
+    "static-favicon": "*",
+    "cookie-parser": "*",
+    "body-parser": "*",
+    "debug": "~0.7.4",
+    "swig": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "express-session": "*",
+    "node-sass": "*",
+    "forever": "*",
+    "async": "*",
+    "mongodb-uri": "*",
+    "nodemailer": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-sass": "*"
+  }
+}

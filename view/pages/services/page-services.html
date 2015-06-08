@@ -1,0 +1,57 @@
+{% extends '../../layout/layout-services.html' %}
+{% block title %}Services{% endblock %}
+{% block content %}
+    <section id="services">
+
+
+        <section class="row widget info">
+            <div class="widget_heading">
+                <h3>Info and Messages</h3>
+            </div>
+            <div class="widget_cont">
+                <p>Your last login was in : {{ users_data.last_info |date('jS \o\f F') }}, from : Soon</p>
+            </div>
+        </section>
+
+        <section class="row widget users">
+            <div class="widget_heading">
+                <h3>Users</h3>
+            </div>
+            <div class="widget_cont">
+                <table>
+                    <tbody>
+                    {% for item in users_data.showallUsers %}
+                        <tr>
+                            <td>{{ item.username }}</td>
+                            <td>{{ item.email }}</td>
+                            <td>Last login: {{ item.lastLogin |date('jS \o\f F') }}</td>
+                            <td>Date created: {{ item.dateCreate |date('jS \o\f F') }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <section class="row widget settings">
+            <div class="widget_heading">
+                <h3>Settings</h3>
+            </div>
+            <div class="widget_cont">
+                <div>
+                    <p>Last change by: {{ users_data.reg_settings.whoChanged }}</p>
+                </div>
+                <div class="turn_reg">
+                    {% if users_data.reg_settings.registration == true %}
+                        <button>Turn off registration</button>
+                    {% else %}
+                        <button>Turn on registration</button>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+{% endblock %}

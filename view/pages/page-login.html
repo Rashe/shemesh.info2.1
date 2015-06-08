@@ -1,0 +1,27 @@
+{% extends '../layout/layout-main.html' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<section id="login">
+    <h1>{{data.login_h1}}</h1>
+
+    <div data-alert id="error_disp" class="alert-box">
+        <p></p>
+        <span class="close">&times;</span>
+    </div>
+    <form name="login_form">
+        <div class="inp_holder">
+            <input name="username" type="text" placeholder="{{data.login_userPl}}" required pattern="[A-Za-z0-9]{1,20}"/>
+        </div>
+        <div class="inp_holder">
+            <input name="password" type="password" placeholder="{{data.login_passPl}}" required/>
+        </div>
+        <div class="but_holder">
+            <button class="button">{{data.login_button}}</button>
+        </div>
+    </form>
+
+    <a href="/registration" class="form_register">{{data.login_regL}}</a>
+    <a href="/forgot_pass" class="fp_pass">Forgot password</a>
+
+</section>
+{% endblock %}

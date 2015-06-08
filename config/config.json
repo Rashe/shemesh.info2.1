@@ -1,0 +1,9 @@
+{
+    "app_secret": "vodka_huj_seledka",
+    "email_reciever": "@gmail.com",
+    "email_auth_user": "@gmail.com",
+    "email_auth_pass": "",
+    "crypto": "sha256",
+    "mongo_user": "ra",
+    "mongo_pass": "12"
+}

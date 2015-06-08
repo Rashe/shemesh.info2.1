@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://shemesh.info/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://shemesh.info/blog</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://shemesh.info/about</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://shemesh.info/blog/post/site_redesign_and_mobile_frendly</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://shemesh.info/blog/post/shadow_of_mordor</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://shemesh.info/blog/post/the_first_post_in_blog</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

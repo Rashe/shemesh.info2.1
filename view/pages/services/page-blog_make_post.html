@@ -1,0 +1,37 @@
+{% extends '../../layout/layout-services.html' %}
+{% block title %}Services{% endblock %}
+{% block content %}
+
+    <section id="services">
+        <section class="row make_post">
+            <form name="make_post" id="make_post_id">
+                <div class="large-9 columns">
+                    <div>
+                        <input type="text" name="title" placeholder="Title" required/>
+                    </div>
+                    <div>
+                        <input type="text" name="post_link" placeholder="Post link(Leave blank to auto generate)"/>
+                    </div>
+                    <div>
+                        <textarea placeholder="Post Body" name="post_body" rows="30" cols="50" required></textarea>
+                        <script>
+                            var editor = CKEDITOR.replace('post_body');
+                            editor.on('change', function (evt) {
+                                $('textarea').val(evt.editor.getData());
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="large-3 columns post_pref">
+                    <div>
+                        <label for="checkbox_publish">Publish?</label>
+                        <input type="checkbox" name="publish" id="checkbox_publish" value="Publish"/>
+                    </div>
+                    <button>Make post</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+{% endblock %}

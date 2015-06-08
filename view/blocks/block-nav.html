@@ -1,0 +1,18 @@
+{% block nav %}
+    <nav id="outside">
+        <ul class="top_list">
+            <li class="top_menu"><a href="/" title="{{ data.nav_home_title }}">{{ data.nav_home }}</a></li>
+            <!--<li class="top_menu"><a href="#" title="{{ data.nav_tests_title }}">{{ data.nav_tests }}</a></li>-->
+            <li class="top_menu"><a href="/blog" title="{{ data.nav_blog_title }}">{{ data.nav_blog }}</a></li>
+            <li class="top_menu"><a href="/services" title="{{ data.nav_services_title }}">{{ data.nav_services }}</a>
+            </li>
+            <li class="top_menu about_menu"><a href="/about" title="{{ data.nav_about_title }}">{{ data.nav_about }}</a>
+
+                <div class="nav_image"><img src="img/cat.jpg" alt="cat"/></div>
+            </li>
+            <li class="top_menu jeraf"><a href="https://jeraf.tv" title="jeraf.tv">Jeraf.tv</a></li>
+
+        </ul>
+        <!--<span class="nav_text">Navigation</span>-->
+    </nav>
+{% endblock %}

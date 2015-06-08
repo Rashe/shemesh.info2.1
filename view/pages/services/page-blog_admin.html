@@ -1,0 +1,68 @@
+{% extends '../../layout/layout-services.html' %}
+{% block title %}Services{% endblock %}
+{% block content %}
+    <section id="services">
+
+        <section class="row widget posts_wid">
+            <div class="widget_heading">
+                <h3>Posts</h3>
+            </div>
+            <div class="widget_cont">
+
+                {% if blog_admin.all_posts.def_data %}
+                    <div class="posts_stat">
+                        <p>{{ blog_admin.all_posts.def_data }}</p>
+                    </div>
+
+                {% else %}
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Link</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Edit</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in blog_admin.all_posts %}
+                            <tr>
+                                <td>{{ item.post_title }}</td>
+                                <td><a href='/blog/post/{{ item.post_link }}'>Link to Post</a></td>
+                                <td>{{ item.post_dateCreate |date('jS \o\f F') }}</td>
+
+                                {% if item.post_published == true %}
+                                    <td class="green">Published</td>
+                                {% else %}
+                                    <td class="red">UnPublished</td>
+                                {% endif %}
+
+                                <td><a href="/blog/post_edit/{{ item.post_link }}">Edit</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                {% endif %}
+            </div>
+        </section>
+        <section class="row widget posts_wid">
+            <div class="widget_heading">
+                <h3>Blog info</h3>
+            </div>
+            <div class="widget_cont">
+                <p>Posts: {{ blog_admin.count_posts }}</p>
+            </div>
+        </section>
+        <section class="row widget posts_wid">
+            <div class="widget_heading">
+                <h3>Create RSS</h3>
+            </div>
+            <div class="widget_cont">
+                <button class="gen_rss">Generate RSS file</button>
+                <div><p class="rss_callback"></p></div>
+            </div>
+        </section>
+
+    </section>
+{% endblock %}

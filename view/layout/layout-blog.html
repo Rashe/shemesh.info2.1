@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    {% if post_data.post_title %}
+    <title>{{post_data.post_title}} | shemesh.info</title>
+    <meta name="description" content="{{post_data.post_title}}">
+    {% else %}
+    <title>{{data.blog_def_title}} | shemesh.info</title>
+    <meta name="description" content="{{data.meta_descti_blog}}, {{data.blog_def_title}}">
+    {% endif %}
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    {# CSS #}
+    {% set icons = true  %}
+    {% block css_include %}
+    {% include '../blocks/block-css_include.html' with icons %}
+    {% endblock %}
+
+    {# JS #}
+    {% block js_include %}
+    {% include '../blocks/block-js_include.html' %}
+    {% endblock %}
+</head>
+<body class="{{css}}">
+<aside id="aside_nav">
+    {# NAVIGATION #}
+    {% block nav %}
+    {% include '../blocks/block-nav_blog.html' with data%}
+    {% endblock %}
+</aside>
+
+
+{# CONTENT #}
+{% block content %}{% endblock %}
+
+{# TRACKING #}
+{% block track %}
+{% include '../blocks/block-tracking.html' with data%}
+{% endblock %}
+</body>
+</html>

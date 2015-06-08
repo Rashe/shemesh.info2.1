@@ -1,0 +1,39 @@
+{% extends '../../layout/layout-services.html' %}
+{% block title %}Services{% endblock %}
+{% block content %}
+    <section id="services">
+
+        <section class="row user_info_section">
+            {#{{ data_db | json_encode }}#}
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Username:</td>
+                        <td>{{ data_db.username }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{ data_db.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Date created:</td>
+                        <td>{{ data_db.dateCreate | date('jS \o\f F Y') }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="large-4 columns user_info_formWrap">
+            <form name="edit_user_info" id="edit_user_info">
+                    <div>
+                        <input type="text" name="first_name" placeholder="First Name" value="{{ data_db.first_name }}"/>
+                    </div>
+                    <div>
+                        <input type="text" name="second_name" placeholder="Family Name" value="{{ data_db.second_name }}"/>
+                    </div>
+                    <button>Save</button>
+            </form>
+            </div>
+        </section>
+
+    </section>
+{% endblock %}

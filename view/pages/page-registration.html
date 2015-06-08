@@ -1,0 +1,32 @@
+{% extends '../layout/layout-main.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+<section id="registration">
+    <h1>{{data.reg_h1}}</h1>
+
+    <div data-alert id="error_disp" class="alert-box">
+        <p></p>
+        <span class="close">&times;</span>
+    </div>
+    <form name="registration_form">
+        <div class="inp_holder">
+            <input name="username" type="text" placeholder="{{data.reg_userPl}} (a, A, 0-9)" required pattern="[A-Za-z0-9]{1,20}"/>
+        </div>
+        <div class="inp_holder">
+            <input name="email" type="email" placeholder="{{data.reg_emalPl}}" required/>
+        </div>
+        <div class="inp_holder">
+            <input name="password" type="password" placeholder="{{data.reg_passPl}}" required/>
+        </div>
+        <div class="for_bots">
+            <input name="ghhh" type="text" id="for_bots"/>
+        </div>
+        <div class="but_holder">
+            <button class="button">{{data.reg_button}}</button>
+        </div>
+    </form>
+
+    <a href="/login" class="form_login">{{data.reg_loginL}}</a>
+
+</section>
+{% endblock %}

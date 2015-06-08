@@ -1,0 +1,42 @@
+{% extends '../../layout/layout-blog.html' %}
+
+{% block content %}
+<section id="blogeg">
+   <div class="heading_row">
+       <h1>{{data.blog_h1}}</h1>
+       <span class="rss_show">
+           <a href="https://feeds.feedburner.com/shemesh"><i class="fa fa-rss"></i></a>
+       </span>
+   </div>
+
+    {% if posts %}
+    {% for item in posts %}
+
+    <article class="post_wra">
+        <h2><a href="/blog/post/{{item.post_link}}" class="article_link">{{item.post_title}}</a></h2>
+
+        <div class="thePost">
+            {#{% set pbd = item.post_body | substr  %}#}
+            {{ item.post_teaser | safe  }}
+            {#<span class="dotes">... </span>#}
+            <a href="/blog/post/{{item.post_link}}" class="more_link">Read More</a>
+        </div>
+        <div class="credit">
+            <p><span class="us_n">{{item.post_user}}</span>, <time>{{item.post_dateCreate |date('jS \o\f F Y')}}</time></p>
+            <!--<a href="error.html" class="comments">3 comments</a>-->
+        </div>
+    </article>
+
+    {% endfor %}
+    {% else %}
+
+    <article class="post_wra">
+        <div class="thePost">
+            <p>{{data.blog_noPosts}}</p>
+        </div>
+        </article>
+
+    {% endif %}
+
+</section>
+{% endblock %}

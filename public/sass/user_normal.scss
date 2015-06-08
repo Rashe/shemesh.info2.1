@@ -1,0 +1,38 @@
+$user_color: #008CBA;
+
+body.user_normal {
+  background: #fff;
+}
+
+hr {
+  border: solid #DDDDDD;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.11111rem 0 1.05556rem;
+  height: 0;
+}
+
+.user_normal {
+  color: $user_color;
+  h1, p {
+    color: $user_color;
+  }
+}
+
+#use_browser {
+  width: 550px;
+  margin: 140px auto 0;
+  a {
+    color: $user_color;
+
+    &:hover {
+      color: #C80000;
+    }
+  }
+}
+
+.user_normal {
+  .nav_text {
+    color: #000;
+  }
+}

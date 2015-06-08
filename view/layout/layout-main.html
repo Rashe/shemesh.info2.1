@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{% block title %}{% endblock %} | shemesh.info</title>
+    <meta name="description" content="{{data.meta_description}}">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    {# CSS #}
+    {% block css_include %}
+    {% include '../blocks/block-css_include.html' %}
+    {% endblock %}
+
+    {# JS #}
+    {% block js_include %}
+    {% include '../blocks/block-js_include.html' %}
+    {% endblock %}
+</head>
+<body class="{{css}}">
+<header>
+    {# NAVIGATION #}
+    {% block nav %}
+    {% include '../blocks/block-nav.html' with data%}
+    {% endblock %}
+</header>
+
+
+{# CONTENT #}
+{% block content %}{% endblock %}
+
+{# TRACKING #}
+{% block track %}
+{% include '../blocks/block-tracking.html' with data%}
+{% endblock %}
+</body>
+</html>

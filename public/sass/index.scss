@@ -1,0 +1,135 @@
+#content_wra {
+//  width: 500px;
+//  height: 600px;
+//  margin: auto;
+  position: relative;
+}
+
+#eban, #pop_image {
+  display: $bl;
+  height: 300px;
+  position: relative;
+  color: $color_main;
+  text-align: center;
+  top: -800px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.search_form {
+  display: $bl;
+  width: 40%;
+  position: relative;
+  color: $color_main;
+  margin: 0 auto;
+  text-align: center;
+
+  input {
+    color: #fff;
+    width: 23em;
+    height: 2em;
+    background-color: #474747;
+    border: 1px solid #777;
+    padding-left: 5px;
+  }
+
+  button {
+    width: 5em;
+    height: 2.3em;
+    background-color: #474747;
+    border: 1px solid #777;
+    color: #fff;
+  }
+
+}
+
+.message {
+  display: none;
+  height: 70px;
+  position: relative;
+  color: #000;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fuck {
+  display: none;
+  position: relative;
+  top: -150px;
+  text-align: center;
+
+  p {
+    font-size: 35px;
+    color: #000;
+  }
+}
+
+.here {
+  color: #555;
+  display: none;
+  position: relative;
+  top: -120px;
+  text-align: center;
+
+  a {
+    color: #000;
+  }
+
+  span {
+    font-size: 12px;
+    display: $bl;
+  }
+}
+
+.search_form button:hover, .gay:hover, .gay_or_not:hover {
+  background-color: #777;
+  color: #fff;
+}
+
+#content_box_wra {
+  margin: 0 auto;
+}
+
+.content_box {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+@media screen and (max-width: 900px) and (orientation:landscape) {
+
+  .search_form{
+    width: inherit;
+    margin: -18% auto 0;
+  }
+
+}
+
+@media screen and (max-width: 900px) and (orientation:portrait) {
+  .search_form{
+    width: inherit;
+    margin: -18% auto 0;
+
+    button {
+     width: inherit;
+    }
+
+    input{
+      width: 57%;
+    }
+
+  }
+
+  #eban{
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .message{
+    margin-top: 2em;
+  }
+}
